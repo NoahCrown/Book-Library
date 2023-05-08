@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+:root{
+  --primary-color:#171F2C;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;}
+
+body{
+  background-color: var(--primary-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Nav styling  */
+.nav{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1.4em;
+}
+
+.nav-title{
+  color: white;
+  font-size: 1.4rem;
+  letter-spacing: .2em;
+}
+
+/* Hero img  */
+.hero-img{
+  width: 100%;
+  padding: 1em;
+}
+
+/* Books styling  */
+
+.books-collection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+.section-title{
+  font-size: 1.2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button{
+  padding: 1em;
+  background-color: #9D7A6A;
+  border-radius: 1em ;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Modal  */
+
+
+.ReactModal__Content {
+  height: fit-content;
+  background-color: var(--primary-color) !important;
+  color: white;
+  border-radius: 1em !important;
+}
+
+.ReactModal__Overlay{
+  background-color:#202937 !important;
+}
+
+form{
+  background-color: var(--primary-color);
+  padding: 1em;
+  color: white;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+form label{
+  display: block;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+form input {
+  margin-bottom: .8em;
+  width: 100%;
+}
+
+form button{
+  padding: .5em 1em;
+  width: 100%;
+  background-color: #9D7A6A ;
+  border-radius: .5em;
+  margin-top: 1em;
+  font-weight: 600;
+  font-size: 1rem
+}
+
+/* Books info  */
+.books{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-container{
+  width: 100%;
+  padding: 3em;
+  margin: 1em;
+  color: white;
+  background-color:#171E2C;
+  text-align: center;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  border: 1px solid #9D7A6A;
+
+}
+
+
+
+.status{
+  background-color: beige;
+  color: var(--primary-color);
+  padding: .5em 1em;
+  border-radius: .7em;
+  font-weight: 500;
+}
+
+@media (min-width: 768px){
+  .hero-img{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section-title{
+    font-size: 2rem;
   }
+
+  .ReactModal__Content {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px){
+  .hero-img{
+    width: 50%;
+  }
+
+  .books-collection{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .ReactModal__Content {
+    width: 40%;
+  }
+
+  @media (min-width: 1200px){
+    .hero-img{
+      width: 40%;
+    }
+
+    .books{
+      width: 50%;
+    }
+
+    .ReactModal__Content {
+      width: 30%;
+      margin: 0 auto;
+    }
+
+  }
+
 }
